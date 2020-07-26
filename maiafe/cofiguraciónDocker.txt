@@ -1,0 +1,14 @@
+/** levantar keycloack */
+
+cd MaiaBE/keycloack-11.0.0
+bin/standalone.sh
+
+/* ---- Acceso a keycloack --- */
+http://localhost:8080/auth
+admin admin
+
+
+To represent the user add the following to the server-identities definition <secret value="YWRtaW4=" />
+
+usuario del reino: JIgnacioHP Ignacio8
+/*-----------------------------*/
