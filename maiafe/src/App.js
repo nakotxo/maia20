@@ -1,8 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import logo from './assets/multimedia/logo.svg';
+import './assets/css/App.css';
+import { withTranslation } from 'react-i18next';
+import './componentes/i18next/i18n';
 
-function App() {
+
+export default withTranslation("translation", { withRef: true })(class AppInicio extends Component {
+
+
+  t = this.props.t;
+  render(){
   return (
     <div className="App">
       <header className="App-header">
@@ -18,9 +25,9 @@ function App() {
         >
           Primera versión js y php.
         </a>
+        <p>{this.t("bienvenidos")}</p>
       </header>
     </div>
   );
 }
-
-export default App;
+});
